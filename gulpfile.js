@@ -10,29 +10,29 @@ var gulp   = require('gulp'),
 
 var appJavascriptFolder = 'app/js/**/*.js',
     appCssFolder = 'app/scss/**/*.less',
-    buildJavascripFolder = 'build/js/';
-    buildCssFolder = 'build/css/';
+    buildJavascripFolder = 'target/js/';
+    buildCssFolder = 'target/css/';
 
-gulp.task('jshint', function() {
+gulp.task('js:hint', function() {
   return gulp.src(appJavascriptFolder)
              .pipe(jshint())
              .pipe(jshint.reporter('default', { verbose: true }));
 });
 
-gulp.task('lesslint', function() {
+gulp.task('css:lint', function() {
   return  gulp.src(appCssFolder)
              .pipe(lesshint())
             .pipe(lesshint.reporter());
 });
 
-gulp.task('compilejs', function() {
+gulp.task('js:compile', function() {
   return gulp.src(appJavascriptFolder)
              .pipe(jshint())
              .pipe(uglify())
              .pipe(gulp.dest(buildJavascripFolder));
 });
 
-gulp.task('compilecss', function() {
+gulp.task('css:compile', function() {
   return gulp.src(appCssFolder)
              .pipe(less())
              .pipe(minifyCSS())
@@ -41,7 +41,7 @@ gulp.task('compilecss', function() {
 
 gulp.task('zip', function() {
   var now = moment(new Date());
-  return gulp.src('build/*')
+  return gulp.src('target/*')
              .pipe(zip(now.format('YYYYMMDD')+'.zip'))
              .pipe(gulp.dest('zip'));
 });
@@ -51,6 +51,6 @@ gulp.task('dev', function() {
   gulp.watch(appCssFolder, ['lesslint']);
 });
 
-gulp.task('runtest', sequence('jshint','lesslint'));
+gulp.task('runtest', sequence('js:hint','css:lint'));
 
-gulp.task('build',['runtest'],sequence('compilejs','compilecss','zip'));
+gulp.task('build',['runtest'],sequence('js:compile','css:compile','zip'));
