@@ -11,7 +11,7 @@ Você precisa do gulp instalado globalmente:
 ```sh
 $ npm i -g gulp
 ```
-Depois de instalar o gulp global, faz o clone do repositório e a instalação das dependências:
+Depois de instalar o gulp de forma global, você precisa fazer o clone do projeto e a instalação das dependências:
 
 ```sh
 $ git clone https://github.com/ogawaryu/gulp-automation.git
