@@ -26,3 +26,6 @@ $ npm install
 ```
 
 Agora é só se divertir!
+
+# License
+MIT
