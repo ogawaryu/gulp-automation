@@ -3,7 +3,7 @@ var gulp   = require('gulp'),
     less = require('gulp-less'),
     lesshint = require('gulp-lesshint');
 
-var appCssFolder = 'src/scss/**/*.less',
+var appCssFolder = 'src/less/**/*.less',
     buildCssFolder = 'target/css/';
 
 gulp.task('css:lint', function() {

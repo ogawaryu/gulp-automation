@@ -11,3 +11,5 @@ gulp.task('dev', function() {
 gulp.task('runtest', sequence('js:hint','css:lint'));
 
 gulp.task('build',['runtest'],sequence('js:compile','css:compile','zip'));
+
+gulp.task('server', sequence('build','server:start'));
