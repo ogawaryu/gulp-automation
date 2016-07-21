@@ -8,27 +8,26 @@ O Gulp é um automatizador de tarefas rápido na sua execução, simples de usar
 
 Essas tarefas podem ser qualquer coisa que você precisa fazer de forma repetida ou que vai consumir muito do seu tempo. Por exemplo, minificar imagem, copiar diretórios, concatenar arquivos, compilar Javascript etc. Todas essas são tarefas que, se forem feitas manualmente, irá consumir muito tempo e trabalho; e o Gulp cuida de tudo isso.
 
-# Características do Gulp
-
-* Fácil de usar: Com uma instalação simples e poucas linhas de código, você executa processos trabalhosos com apenas uma linha de comando.
-* Eficiente: Aproveita a tecnologia Stream do Node.js, sem construir arquivos intermediários em disco e usa o mecanismo de pipeline do unix.
-* Fácil de aprender: Basicamente sabendo um pouco sobre o mecanismo de pipeline do unix, Javascript e entendendo a estrutura do gulpfile que é simples, você estará pronto para criar tarefas.
-
+# Gulp characteristics / Características do Gulp
 
 * Easy to use: With simple installation and a few lines of code, you run labor-intensive processes with only a command line.
 * Efficient: Enjoy Stream technology Node.js, without building intermediate files on disk and uses the pipeline mechanism unix.
 * Easy to learn: Basically knowing a little about the pipeline mechanism unix, Javascript and understanding the structure of gulpfile that is simple, you are ready to create jobs.
 
-# Instalação
+* Fácil de usar: Com uma instalação simples e poucas linhas de código, você executa processos trabalhosos com apenas uma linha de comando.
+* Eficiente: Aproveita a tecnologia Stream do Node.js, sem construir arquivos intermediários em disco e usa o mecanismo de pipeline do unix.
+* Fácil de aprender: Basicamente sabendo um pouco sobre o mecanismo de pipeline do unix, Javascript e entendendo a estrutura do gulpfile que é simples, você estará pronto para criar tarefas.
 
+# Installation / Instalação 
+
+You need gulp installed globally:<br/>
 Você precisa do gulp instalado globalmente:
-You need gulp installed globally:
 
 ```sh
 $ npm i -g gulp
 ```
+After installing the globally gulp, you need to clone the design and installation of the dependencies:<br/>
 Depois de instalar o gulp de forma global, você precisa fazer o clone do projeto e a instalação das dependências:
-After installing the globally gulp, you need to clone the design and installation of the dependencies:
 
 ```sh
 $ git clone https://github.com/ogawaryu/gulp-automation.git
@@ -36,8 +35,8 @@ $ cd gulp-automation
 $ npm install
 ```
 
+Now just have fun! <br/>
 Agora é só se divertir!
-Now just have fun!
 
 # License
 MIT
